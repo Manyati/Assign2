@@ -160,6 +160,7 @@ public class CollectionsMvn {
         }
 
         System.out.println("Collect Method done!! ");
+
     }
 
 

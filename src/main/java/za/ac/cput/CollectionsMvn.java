@@ -124,22 +124,22 @@ public class CollectionsMvn {
         Many.add(3);
         Many.add(50);
         Many.add(4);
-        // Many.add(1, 14);//fixing 6 to 14 index1.
+      Many.add(1, 14);//fixing 6 to 14 index1.
 
-       // System.out.println("Total number of Elements in the List : " + Many.size());//total number
+       System.out.println("Total number of Elements in the List : " + Many.size());//total number
 
-      /*  Iterator<Integer> AyList = Many.iterator();
+     Iterator<Integer> AyList = Many.iterator();
         while (AyList.hasNext()) {
             Integer str = AyList.next();
             System.out.println(str); //printing arrayList numbers.
         }
 
-        // Many.remove(0);
+       Many.remove(0);
         System.out.println("Is Element 5 there? :" + Many.contains(5));
         System.out.println("The Value @ index 1 is :" + Many.get(1));
         System.out.println("Number of Elements :" + Many.size());
         Collections.sort(Many);
-        System.out.println(Many);*/
+        System.out.println(Many);
 
         for (String name : names) {            //add names to the arraylist
             Munya1.add(name);

@@ -74,10 +74,10 @@ public class CollectionsMvn {
             System.out.println("Found the mark 100 for: " + treemap.get(search));
         }
         System.out.println(" ");
-        System.out.println("Number of Students left: " + treemap.size());
-        System.out.println(treemap.ceilingKey(85));//  ?>=85
-        System.out.println(treemap.higherKey(70));//  ?>70
-        System.out.println(treemap.floorKey(80));// ?<=80
+        System.out.println("Number of Students left =: " + treemap.size() + "\n");
+        System.out.println("Numbers above or equal to 85 =: " + treemap.ceilingKey(85));//  ?>=85
+        System.out.println("Numbers above or equal to 70 =: " + treemap.higherKey(70));//  ?>70
+        System.out.println("Numbers less than 80 =: " + treemap.floorKey(80));// ?<=80
         System.out.println("MapMun Method done!! " + "\n");
     }
 

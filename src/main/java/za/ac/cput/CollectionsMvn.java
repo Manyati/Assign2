@@ -8,7 +8,7 @@ import java.util.*;
  */
 public class CollectionsMvn {
 
-    String[] names = {"Munya", "Honest", "Mpu", "Sanele", "Ayanda", "Asanda", "Manyati", "Munya", "Mpungu"};
+    String[] names = { "Honest", "Mpu", "Sanele", "Ayanda", "Asanda", "Manyati", "Mpungu"};
 
     List<Integer> Many = new ArrayList<>();
     List<String> Munya1 = new ArrayList<String>();
@@ -33,12 +33,6 @@ public class CollectionsMvn {
             Munya1.add(name);
 
         }
-        System.out.println(" ");
-        System.out.println("List of Students 2021 :");     //print out names in the list
-        for (int i = 0; i < Munya1.size(); i++) {
-
-            System.out.println(Munya1.get(i));
-        }
         Collections.sort(Munya1);                             //sort the list using and print out its content
         System.out.println(" ");
         System.out.println("Sorted List of Students 2021 :");
@@ -48,8 +42,19 @@ public class CollectionsMvn {
 
         }
         System.out.println("Number of Elements :" + Munya1.size());
-        System.out.println("ManyatiList Method done!! ");
+        Munya1.remove("Mpu");
+        System.out.println("Removed Mpu from the List !! " + Munya1);
 
+        System.out.println(" ");
+        String sea = "Asanda";
+        for( int i=0; i <Munya1.size(); i++) {
+            System.out.println(Munya1.get(i));
+
+            if (sea == Munya1.get(i)) {
+                System.out.println("Found: " + sea + " / On Index: " + i + "\n");
+                System.out.println("ManyatiList Method done!! " + "\n");
+            }
+        }
     }
     public void MapMun() {
 
@@ -58,23 +63,22 @@ public class CollectionsMvn {
         treemap.put(90, "Sanele");
         treemap.put(80, "Ayanda");
         treemap.put(75, "Asanda");
+        treemap.put(81, "Honest");
 
-        System.out.println(treemap.ceilingKey(85));//  ?>=85
-        System.out.println(treemap.higherKey(70));//  ?>70
-        System.out.println(treemap.floorKey(80));// ?<=80
-        System.out.println("MapMun Method done!! ");
         for (int key : treemap.keySet()){
             System.out.println(key+ " - " + treemap.get(key));
         }
         System.out.println(" ");
         int search = 100;
         if (treemap.containsKey(search)){
-            System.out.println("Found the mark: " + treemap.get(search));
+            System.out.println("Found the mark 100 for: " + treemap.get(search));
         }
-        treemap.clear();
         System.out.println(" ");
         System.out.println("Number of Students left: " + treemap.size());
-
+        System.out.println(treemap.ceilingKey(85));//  ?>=85
+        System.out.println(treemap.higherKey(70));//  ?>70
+        System.out.println(treemap.floorKey(80));// ?<=80
+        System.out.println("MapMun Method done!! " + "\n");
     }
 
     public void setTreeMethod() {
@@ -89,14 +93,14 @@ public class CollectionsMvn {
 
         Manyati = new TreeSet<String>(Munya1);
         System.out.println( " ");
-        System.out.println("Names Printed with no duplicates: ");
+        System.out.println("Names Added with no duplicates: ");
 
         for (String name :Manyati){
             System.out.println(name);
         }
 
 
-        System.out.println("SetTree Method done!! ");
+        System.out.println("SetTree Method done!! " + "\n");
     }
 
 
@@ -112,9 +116,6 @@ public class CollectionsMvn {
 
         bob.MapMun();
         bob.collect();
-
-
-
     }
 
 
@@ -135,31 +136,17 @@ public class CollectionsMvn {
         }
 
        Many.remove(0);
+        System.out.println("Value at Index 0 Removed !! " + Many + "\n");
         System.out.println("Is Element 5 there? :" + Many.contains(5));
         System.out.println("The Value @ index 1 is :" + Many.get(1));
         System.out.println("Number of Elements :" + Many.size());
-        Collections.sort(Many);
-        System.out.println(Many);
-
-        for (String name : names) {            //add names to the arraylist
-            Munya1.add(name);
-
-        }
+        Collections.sort(Many);                             //sort the list using and print out its content
         System.out.println(" ");
-        System.out.println("List of friends are:");     //print out names in the list
-        for (int i = 0; i < Munya1.size(); i++) {
-
-            System.out.println(Munya1.get(i));
+        System.out.println("Sorted list of Numbers added: ");
+        for (int i = 0; i < Many.size(); i++) {
+            System.out.println(Many.get(i));
         }
-        Collections.sort(Munya1);                             //sort the list using and print out its content
-        System.out.println(" ");
-        System.out.println("Sorted list of friends are:");
-        for (int i = 0; i < Munya1.size(); i++) {
-
-            System.out.println(Munya1.get(i));
-        }
-
-        System.out.println("Collect Method done!! ");
+        System.out.println("Collect Method done!! " + "\n");
 
     }
 
